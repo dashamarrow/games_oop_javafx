@@ -35,7 +35,9 @@ public class BishopBlackTest {
                 () -> {
                     bishopBlack.way(Cell.C3);
                 });
-        assertThat(exception.getMessage()).isEqualTo("Could not move by diagonal from C1 to C3");
+        assertThat(exception.getMessage()).isEqualTo(
+                String.format("Could not move by diagonal from %s to %s", Cell.C1, Cell.C3)
+        );
     }
 
     @Test
